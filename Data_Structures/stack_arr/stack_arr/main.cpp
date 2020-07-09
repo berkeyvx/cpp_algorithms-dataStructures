@@ -20,7 +20,7 @@
 
 class stack_arr {
     int index = -1;
-    public :int size = 1;
+    int size = 1;
     int *arr = new int[1];
     
 private:
@@ -28,11 +28,6 @@ private:
     void shrink();
     
 public:
-    void debug(){
-        for (int i = 0; i < index + 1; i++) {
-            std::cout << arr[i] << " ";
-        }
-    }
     
     ~stack_arr(){
         delete [] arr;
@@ -126,7 +121,5 @@ int main(int argc, const char * argv[]) {
     s.pop();
     s.push(1);
     s.push(2);
-    s.debug();
-    std::cout << "is Empty:" << s.isEmpty() << " is Full:" << s.isFull() << " size:" << s.size;
     return 0;
 }
